@@ -205,10 +205,17 @@ fn main() {
         "cargo:rustc-link-lib={}=imobiledevice-1.0",
         location_determinator
     );
-    println!("cargo:rustc-link-lib={}=usbmuxd-2.0", location_determinator);
+    println!(
+	"cargo:rustc-link-lib={}=usbmuxd-2.0", 
+	location_determinator
+    );
     println!(
         "cargo:rustc-link-lib={}=imobiledevice-glue-1.0",
         location_determinator
+    );
+    println!(
+	"cargo:rustc-link-lib={}=plist-2.0",
+	location_determinator
     );
 }
 
